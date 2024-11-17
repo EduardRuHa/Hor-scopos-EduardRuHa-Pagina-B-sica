@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora tu horóscopo diario y aprende más sobre la astronomía zodiacal. Descubre consejos y frases motivacionales para tu día.">
+    <title>Horóscopos EduardRuHa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #21678a;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        main {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #21678a;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        footer {
+            margin-top: 30px;
+            background-color: #e0f7fa;
+            padding: 20px;
+            text-align: center;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0f7fa;
+            border-radius: 5px;
+        }
+        .motivational-quote {
+            font-style: italic;
+            margin-top: 20px;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Horóscopos EduardRuHa</h1>
+</header>
+
+<main>
+    <section>
+        <h2>¿Qué son los Horóscopos?</h2>
+        <p>Los Horóscopos son interpretaciones astrológicas basadas en la posición de los planetas y las estrellas en el momento de tu nacimiento. Cada Signo Zodiacal tiene características únicas que influyen en diferentes aspectos de tu vida.</p>
+    </section>
+
+    <section>
+        <h2>Los Signos Zodiacales</h2>
+        <p>En el Zodiaco, Hay 12 Signos, cada uno relacionado con un período específico del año:</p>
+        <ul>
+            <li>Aries (21 Marzo - 19 Abril)</li>
+            <li>Tauro (20 Abril - 20 Mayo)</li>
+            <li>Géminis (21 Mayo - 20 Junio)</li>
+            <li>Cáncer (21 Junio - 22 Julio)</li>
+            <li>Leo (23 Julio - 22 Agosto)</li>
+            <li>Virgo (23 Agosto - 22 Septiembre)</li>
+            <li>Libra (23 Septiembre - 22 Octubre)</li>
+            <li>Escorpio (23 Octubre - 21 Noviembre)</li>
+            <li>Sagitario (22 Noviembre - 21 Diciembre)</li>
+            <li>Capricornio (22 Diciembre - 19 Enero)</li>
+            <li>Acuario (20 Enero - 18 Febrero)</li>
+            <li>Piscis (19 Febrero - 20 Marzo)</li>
+        </ul>
+    <img src="https://hips.hearstapps.com/hmg-prod/images/horoscopo-fechas-signos-zodiaco-6448db9d8c3cf.jpg?resize=980:*" alt="Signos Zodiacales">
+    </section>
+
+    <section>
+        <h2>Conoce tu Horóscopo</h2>
+        <p>Selecciona tu Signo para descubrir tu Horóscopo del día y recibir una Frase Motivacional:</p>
+
+        <select id="signo">
+            <option value="aries">Aries</option>
+            <option value="tauro">Tauro</option>
+            <option value="geminis">Géminis</option>
+            <option value="cancer">Cáncer</option>
+            <option value="leo">Leo</option>
+            <option value="virgo">Virgo</option>
+            <option value="libra">Libra</option>
+            <option value="escorpio">Escorpio</option>
+            <option value="sagitario">Sagitario</option>
+            <option value="capricornio">Capricornio</option>
+            <option value="acuario">Acuario</option>
+            <option value="piscis">Piscis</option>
+        </select>
+        
+        <button onclick="mostrarHoroscopo()">Ver Horóscopo</button>
+
+        <div class="result" id="resultadoHoroscopo"></div>
+        <div class="motivational-quote" id="fraseMotivacional"></div>
+    </section>
+
+    <section>
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas o quieres saber más sobre astrología? Envíanos un mensaje:</p>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Recursos Adicionales</h2>
+        <p>Explora más sobre Astrología y los Signos Zodiacales en los siguientes sitios:</p>
+        <ol>
+            <li><a href="https://www.nationalgeographic.es/historia/2024/07/horoscopo-signos-zodiaco-origen-astrologia" target="_blank">Origen de los Signos Zodiacales</a></li>
+            <li><a href="https://mediateca.inah.gob.mx/repositorio/islandora/search/?f[0]=mods_subject_topic_ms:%22Astrolog%C3%ADa%22" target="_blank">Documentos Astrológicos</a></li>
+        </ol>
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 Horóscopos EduardRuHa. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    function mostrarHoroscopo() {
+        const signo = document.getElementById('signo').value;
+        const resultadoHoroscopo = document.getElementById('resultadoHoroscopo');
+        const fraseMotivacional = document.getElementById('fraseMotivacional');
+        
+        const horoscopos = {
+            aries: "Hoy es un buen día para tomar decisiones importantes.",
+            tauro: "La paciencia te llevará lejos.",
+            geminis: "Hoy te sentirás muy comunicativo.",
+            cancer: "Reflexiona sobre tus emociones.",
+            leo: "La creatividad fluye dentro de ti.",
+            virgo: "Organiza tu vida con disciplina.",
+            libra: "Busca momentos de tranquilidad.",
+            escorpio: "Confía en tu intuición.",
+            sagitario: "Prueba algo nuevo.",
+            capricornio: "Trabaja hacia tus metas.",
+            acuario: "Comparte tus ideas innovadoras.",
+            piscis: "Conecta profundamente con los demás."
+        };
+
+        const frases = [
+            "Nunca dejes de soñar.",
+            "El éxito está en las pequeñas acciones.",
+            "Hoy es un buen día para empezar algo nuevo.",
+            "La confianza en ti mismo es clave.",
+            "La perseverancia supera cualquier obstáculo."
+        ];
+
+        resultadoHoroscopo.innerHTML = horoscopos[signo] || "Selecciona un signo.";
+        fraseMotivacional.innerHTML = `"${frases[Math.floor(Math.random() * frases.length)]}"`;
+    }
+</script>
+
+</body>
+</html>
